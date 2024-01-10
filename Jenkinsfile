@@ -4,9 +4,9 @@ node {
       git url: 'https://github.com/akhilpasha07/project123.git', branch: 'main'
       mvnHome = tool 'maven'
    }
-//   stage ('CodeScan') {
-//       sh "'${mvnHome}/bin/mvn' sonar:sonar"
-//   }
+  stage ('CodeScan') {
+      sh "'${mvnHome}/bin/mvn' sonar:sonar"
+  }
   stage ('Clean') {
       sh "'${mvnHome}/bin/mvn' clean"
   }
@@ -28,7 +28,7 @@ node {
   stage ('Install') {
       sh "'${mvnHome}/bin/mvn' install"
   }
-  stage ('Deploy') {
-      sh "'${mvnHome}/bin/mvn' deploy"
-  }
+ // stage ('Deploy') {
+   //   sh "'${mvnHome}/bin/mvn' deploy"
+  //}
 }
