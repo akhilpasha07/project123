@@ -1,7 +1,7 @@
 node {
    def mvnHome
   stage('Prepare') {
-      git url: 'https://github.com/kesavkummari/project123.git', branch: 'main'
+      git url: 'https://github.com/akhilpasha07/project123.git', branch: 'main'
       mvnHome = tool 'maven'
    }
 //   stage ('CodeScan') {
