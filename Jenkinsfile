@@ -52,7 +52,7 @@ pipeline {
         }
         stage('Stage-9 : Deployment - Deploy a Artifact kloudbinay-3.6.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://34.201.73.207/manager/text/deploy?path=/akhil&update=true"'
+                sh 'curl -u admin:redhat@123 -T target/**.war "http://34.201.73.207:8080/manager/text/deploy?path=/akhil&update=true"'
             }
         }
         stage('Stage-10 : SmokeTest') { 
